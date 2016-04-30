@@ -20,7 +20,7 @@ angular.module('ion-google-place', [])
                 },
                 link: function(scope, element, attrs, ngModel) {
                     scope.$watch('ngModel', function(newVal){
-                      console.log("init"+newVal);
+                      //console.log("init"+newVal);
                       element.val(scope.parseLocation(newVal));
                     });
                     var unbindBackButtonAction;
@@ -275,8 +275,7 @@ angular.module('ion-google-place', [])
                         if(!ngModel.$viewValue){
                             element.val('');
                         } else {
-                            //element.val(ngModel.$viewValue.formatted_address || '');
-                            element.val(scope.ngModel.$viewValue)
+                            element.val(ngModel.$viewValue)
                         }
                     };
 
